@@ -1,0 +1,95 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#101010">
+    <meta name="description" content="Sam Lee, CS Master's student at EPFL. Interested in LLM agents, human-AI interaction, and evaluation.">
+    <title>Sam Lee</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Homemade+Apple&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+
+    <script async="" src="https://plausible.samlee.ch/js/pa-YAWWwzYRuwDrp0LKgpBE1.js"></script>
+    <script>
+    window.plausible = window.plausible || function() {
+        (plausible.q = plausible.q || []).push(arguments);
+    };
+    plausible.init = plausible.init || function(i) {
+        plausible.o = i || {};
+    };
+    plausible.init();
+    </script>
+</head>
+<body>
+    <main class="hero-section">
+        <div class="container">
+            <h1 class="big-name">SAM LEE</h1>
+            <!-- <p class="profile-subtitle">CS Master's @ EPFL</p> -->
+
+            <nav class="buttons" aria-label="Profile links">
+                <a href="https://github.com/jamsamjam" class="button" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 19 4.77 5.07 5.07 0 0 0 18.91 1S17.73.65 15 2.48a13.38 13.38 0 0 0-7 0C5.27.65 4.09 1 4.09 1A5.07 5.07 0 0 0 4 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 8 18.13V22"/>
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/samleee/" class="button" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/>
+                        <rect width="4" height="12" x="2" y="9"/>
+                        <circle cx="4" cy="4" r="2"/>
+                    </svg>
+                </a>
+                <a href="#" class="button" aria-label="CV">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                        <path d="M14 2v6h6"/>
+                        <path d="M16 13H8"/>
+                        <path d="M16 17H8"/>
+                        <path d="M10 9H8"/>
+                    </svg>
+                </a>
+            </nav>
+
+            <p class="research-text">
+                Interested in LLM agents, human-AI interaction, and evaluation. <br/>
+                Feel free to reach out to chat about research or just say hi! <br/>
+                <br/>
+                sam.lee [at] epfl [dot] ch
+            </p>
+            <p class="local-time">
+                Lausanne
+                <span aria-hidden="true">·</span>
+                <time id="lausanne-time" datetime="2026-11-10T06:08:32.320Z">07:08</time>
+                 local time
+            </p>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p class="footer-quote">So you have to trust that the dots will somehow connect in your future.</p>
+        <p class="footer-copyright">© 2025 Sam Lee</p>
+    </footer>
+
+    <script>
+    window.addEventListener('DOMContentLoaded', () => {
+        const clock = document.getElementById('lausanne-time');
+        const formatter = new Intl.DateTimeFormat('en-GB', {
+            timeZone: 'Europe/Zurich',
+            hour: '2-digit',
+            minute: '2-digit',
+            hour12: false
+        });
+        function updateTime() {
+            const now = new Date();
+            clock.textContent = formatter.format(now);
+            clock.dateTime = now.toISOString();
+        }
+        updateTime();
+        setInterval(updateTime, 30_000);
+    });
+    </script>
+
+</body>
+</html>

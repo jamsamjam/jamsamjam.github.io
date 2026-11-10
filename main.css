@@ -1,0 +1,131 @@
+:root {
+  --background: #101010;
+  --text: #eeeeee;
+  --muted: #eeeeee9e;
+  --accent: #5ca8e7;
+}
+
+* { box-sizing: border-box; }
+html { min-height: 100%; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--text);
+  background-color: var(--background);
+  background-image: url('src/main2.png');
+  background-size: auto;
+  background-position: 0 0;
+  background-attachment: scroll;
+  overflow-x: hidden;
+  font-family: Helvetica, Arial, sans-serif;
+}
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 89vh;
+  min-height: 89svh;
+  padding: 72px 24px 48px;
+}
+.container {
+  width: 100%;
+  max-width: 720px;
+  text-align: center;
+}
+.big-name {
+  display: inline-block;
+  position: relative;
+  margin: 0;
+  padding-bottom: 0;
+  cursor: default;
+  color: var(--accent);
+  font: 400 clamp(60px, 9vw, 104px)/0.98 'Anton', Impact, sans-serif;
+  letter-spacing: -0.025em;
+}
+/* Name underline effect — temporarily disabled.
+.big-name::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 3px;
+  height: 4px;
+  width: 0;
+  background: var(--accent);
+  transition: width 0.35s ease;
+}
+.big-name:hover::after { width: 100%; }
+*/
+.profile-subtitle {
+  margin: 20px 0 0;
+  font-size: clamp(14px, 2vw, 18px);
+  font-weight: 400;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  margin-top: 20px;
+}
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #eeeeee;
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+.button:hover, .button:focus-visible {
+  color: rgb(143, 198, 243);
+  transform: translateY(-2px);
+}
+.button svg {
+  width: 24px;
+  height: 24px;
+}
+.research-text {
+  max-width: 620px;
+  margin: 44px auto 0;
+  font-size: clamp(15px, 1.8vw, 18px);
+  line-height: 1.7;
+}
+.local-time {
+  color: var(--muted);
+  font-size: 12px;
+  letter-spacing: 0.05em;
+}
+.local-time time { font-variant-numeric: tabular-nums; }
+.site-footer {
+  width: 100%;
+  text-align: center;
+  color: var(--text);
+  padding: 14px 24px 36px;
+  background: transparent;
+}
+.footer-quote {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 2;
+}
+.footer-copyright {
+  margin: 19px 0 0;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+@media (min-width: 1200px) {
+  body { background-position: center 30%; }
+}
+@media (max-width: 600px) {
+  .hero-section { min-height: 85svh; padding: 60px 20px 40px; }
+  .big-name { font-size: clamp(56px, 14vw, 78px); }
+  .profile-subtitle { margin-top: 24px; }
+  .buttons { margin-top: 18px; }
+  .research-text { margin-top: 36px; }
+  .contact-email { margin-top: 20px; }
+  .local-time { margin-top: 30px; }
+  .footer-quote { font-size: 10px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .button { transition: none; }
+}
