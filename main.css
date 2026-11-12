@@ -1,131 +1,91 @@
 :root {
-  --background: #101010;
-  --text: #eeeeee;
-  --muted: #eeeeee9e;
-  --accent: #5ca8e7;
+  color-scheme: light;
+  --background: #ffffff;
+  --text: #111111;
+  --muted: #555555;
+  --accent: #e8a4b8;
 }
 
 * { box-sizing: border-box; }
-html { min-height: 100%; }
+
 body {
-  margin: 0;
-  min-height: 100vh;
+  max-width: 680px;
+  margin: 48px auto;
+  padding: 0 20px;
   color: var(--text);
-  background-color: var(--background);
-  background-image: url('src/main2.png');
-  background-size: auto;
-  background-position: 0 0;
-  background-attachment: scroll;
-  overflow-x: hidden;
-  font-family: Helvetica, Arial, sans-serif;
+  background: var(--background);
+  font-family: "Times New Roman", Times, serif;
+  font-size: 16px;
+  line-height: 1.5;
 }
-.hero-section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 89vh;
-  min-height: 89svh;
-  padding: 72px 24px 48px;
-}
+
 .container {
   width: 100%;
-  max-width: 720px;
-  text-align: center;
+  text-align: left;
 }
+
 .big-name {
-  display: inline-block;
-  position: relative;
-  margin: 0;
-  padding-bottom: 0;
-  cursor: default;
-  color: var(--accent);
-  font: 400 clamp(60px, 9vw, 104px)/0.98 'Anton', Impact, sans-serif;
-  letter-spacing: -0.025em;
+  margin: 0 0 16px;
+  font-size: 32px;
+  line-height: 1.2;
 }
-/* Name underline effect — temporarily disabled.
-.big-name::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 3px;
-  height: 4px;
-  width: 0;
-  background: var(--accent);
-  transition: width 0.35s ease;
-}
-.big-name:hover::after { width: 100%; }
-*/
-.profile-subtitle {
-  margin: 20px 0 0;
-  font-size: clamp(14px, 2vw, 18px);
-  font-weight: 400;
-}
+
+.profile-subtitle { margin: 0 0 16px; }
+
 .buttons {
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 14px;
-  margin-top: 20px;
+  gap: 10px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #999999;
 }
+
 .button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: #eeeeee;
-  text-decoration: none;
-  transition: color 0.2s ease, transform 0.2s ease;
+  color: #000000;
 }
-.button:hover, .button:focus-visible {
-  color: rgb(143, 198, 243);
-  transform: translateY(-2px);
+
+.button:visited { color: #000000; }
+.button:hover, .button:active { color: var(--accent); }
+.button:focus-visible {
+  outline: 2px dotted currentColor;
+  outline-offset: 4px;
 }
+
 .button svg {
-  width: 24px;
-  height: 24px;
+  width: 18px;
+  height: 18px;
 }
-.research-text {
-  max-width: 620px;
-  margin: 44px auto 0;
-  font-size: clamp(15px, 1.8vw, 18px);
-  line-height: 1.7;
-}
+
+.research-text { margin: 24px 0; }
+
 .local-time {
+  margin: 24px 0 0;
   color: var(--muted);
+  font-family: "Courier New", Courier, monospace;
   font-size: 12px;
-  letter-spacing: 0.05em;
 }
+
 .local-time time { font-variant-numeric: tabular-nums; }
+
 .site-footer {
-  width: 100%;
-  text-align: center;
-  color: var(--text);
-  padding: 14px 24px 36px;
-  background: transparent;
+  margin-top: 40px;
+  padding-top: 12px;
+  border-top: 1px solid #999999;
+  color: var(--muted);
+  text-align: left;
+  font-size: 13px;
 }
+
 .footer-quote {
   margin: 0;
-  color: var(--muted);
-  font-size: 12px;
-  line-height: 2;
+  font-style: italic;
 }
-.footer-copyright {
-  margin: 19px 0 0;
-  font-size: 12px;
-  letter-spacing: 1px;
-}
-@media (min-width: 1200px) {
-  body { background-position: center 30%; }
-}
+
+.footer-copyright { margin: 12px 0 0; }
+
 @media (max-width: 600px) {
-  .hero-section { min-height: 85svh; padding: 60px 20px 40px; }
-  .big-name { font-size: clamp(56px, 14vw, 78px); }
-  .profile-subtitle { margin-top: 24px; }
-  .buttons { margin-top: 18px; }
-  .research-text { margin-top: 36px; }
-  .contact-email { margin-top: 20px; }
-  .local-time { margin-top: 30px; }
-  .footer-quote { font-size: 10px; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .button { transition: none; }
+  body { margin: 28px auto; padding: 0 16px; }
 }
