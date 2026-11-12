@@ -85,16 +85,16 @@ body {
 
 .research-text { margin: 24px 0; }
 
-.visitor-map {
+.travel-map {
   width: 100%;
-  max-width: 300px;
+  max-width: 480px;
   margin: 0 auto;
 }
 
-.visitor-map img,
-.visitor-map iframe,
-.visitor-map canvas {
-  max-width: 100%;
+.travel-map img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .local-time {
