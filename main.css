@@ -85,6 +85,18 @@ body {
 
 .research-text { margin: 24px 0; }
 
+.visitor-map {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.visitor-map img,
+.visitor-map iframe,
+.visitor-map canvas {
+  max-width: 100%;
+}
+
 .local-time {
   margin: 24px 0 0;
   color: var(--muted);
