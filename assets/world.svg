@@ -38,6 +38,8 @@ THE SOFTWARE.
   [class="United States"],
   [class="Philippines"],
   #TW,
+  #QA,
+  #ES,
   [class="Japan"]
   { fill: #0000ff; }
  </style>
