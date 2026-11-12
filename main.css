@@ -1,9 +1,9 @@
 :root {
   color-scheme: light;
-  --background: #ffffff;
-  --text: #111111;
+  --background: #ffffcc;
+  --text: #000000;
   --muted: #555555;
-  --accent: #e8a4b8;
+  --accent: #ff00ff;
 }
 
 * { box-sizing: border-box; }
@@ -29,8 +29,8 @@ html.is-dragging * {
 
 body {
   max-width: 680px;
-  margin: 48px auto;
-  padding: 0 20px;
+  margin: 24px auto;
+  padding: 0 12px;
   color: var(--text);
   background: var(--background);
   font-family: "Times New Roman", Times, serif;
@@ -40,13 +40,14 @@ body {
 
 .container {
   width: 100%;
-  text-align: left;
+  text-align: center;
 }
 
 .big-name {
   margin: 0 0 16px;
   font-size: 32px;
   line-height: 1.2;
+  color: #0000ff;
 }
 
 .profile-subtitle { margin: 0 0 16px; }
@@ -54,19 +55,23 @@ body {
 .buttons {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #999999;
+  justify-content: center;
+  gap: 18px;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 8px 20px;
+  background: #eeeeee;
+  border: 3px outset #dddddd;
 }
 
 .button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: #000000;
+  color: #0000ee;
 }
 
-.button:visited { color: #000000; }
+.button:visited { color: #551a8b; }
 .button:hover, .button:active { color: var(--accent); }
 .button:focus-visible {
   outline: 2px dotted currentColor;
@@ -92,9 +97,9 @@ body {
 .site-footer {
   margin-top: 40px;
   padding-top: 12px;
-  border-top: 1px solid #999999;
+  border-top: 3px ridge #cccccc;
   color: var(--muted);
-  text-align: left;
+  text-align: center;
   font-size: 13px;
 }
 
@@ -106,5 +111,5 @@ body {
 .footer-copyright { margin: 12px 0 0; }
 
 @media (max-width: 600px) {
-  body { margin: 28px auto; padding: 0 16px; }
+  body { margin: 20px auto; padding: 0 12px; }
 }
